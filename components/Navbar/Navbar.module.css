@@ -1,0 +1,141 @@
+/* d1411e */
+
+.container {
+  padding: 0 50px;
+  background-color: #d1411e;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 3;
+}
+
+.item:last-child {
+  justify-content: flex-end;
+}
+
+.callButton {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.texts {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.text:first-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0;
+}
+
+.listItem {
+  margin: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: #d1411e;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 35px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+  }
+  .item:first-child {
+    flex: 3;
+  }
+  .item:nth-child(2) {
+    flex: 4;
+  }
+  .item:last-child {
+    flex: 1;
+  }
+
+  .logo {
+    display: none !important;
+  }
+
+  .texts {
+    margin-left: 10px;
+  }
+
+  .text:last-child {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .callButton {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 50px;
+  }
+  .item:nth-child(2) {
+    display: none;
+  }
+}
