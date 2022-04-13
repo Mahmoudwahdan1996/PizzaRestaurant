@@ -1,5 +1,5 @@
 import Image from "next/image";
-import  axios  from "axios";
+import axios from "axios";
 
 import classes from "../../styles/Order.module.css";
 
@@ -98,7 +98,13 @@ const Order = ({ order }) => {
 };
 
 export async function getServerSideProps({ params }) {
-  const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
+  const res = await axios.get(
+    `${
+      process.env.NODE_ENV === "development"
+        ? process.env.URL_DEV
+        : process.env.URL_PROD
+    }/api/orders/${params.id}`
+  );
   return {
     props: {
       order: res.data,

@@ -11,7 +11,8 @@ const LoginPage = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:3000/api/login", {
+      console.log(process.env.NODE_ENV);
+      await axios.post(`/api/login`, {
         userName,
         password,
       });
